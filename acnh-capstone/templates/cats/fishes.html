@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+            {% for f in fishes %}
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ f.img_url }}" alt="Card image cap{{ f.name }}">
+              <div class="card-body">
+                <p class="card-text">{{ f.name }}</p>
+                <p class="card-text">{{ f.catch_phrase }}</p>
+              </div>
+            </div>
+          {% endfor %}
+    {% endblock %}
+ 
+
+    

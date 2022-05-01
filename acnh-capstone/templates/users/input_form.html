@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Your museum collection!</h1>
+  <div class="form-group">
+    <form action="/users/{{ user.id }}/items" method="POST">
+    <label id="cat-name" for="cat_name">Choose your item category:</label>
+    <select class="form-control" id="cat_name" name="cat_name">
+      {% for key, value in cats.items() %}
+        <option value="{{ key }}">{{ value }}</option>
+      {% endfor %}
+    </select>
+
+  <div id="secondary_form">
+    <label id="secondary" for="secondary">Add your{{ key }}:</label>
+    <div id="fish">
+    <select id="fish" class ="form-control" name="fish_name">
+        {% for item in fish %}
+          <option value="{{ item.name }}">{{ item.name }}</option>
+        {% endfor %}
+    </select>
+    </div>
+
+    <div id="sea_creature">
+      <select id="sea_creature" class ="form-control" name="sea_creature_name">
+        {% for item in sea_creature %}
+          <option value="{{ item.name }}">{{ item.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div id="fossil">
+      <select id="fossil" class ="form-control" name="fossil_name">
+        {% for item in fossil %}
+          <option value="{{ item.name }}">{{ item.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div id="bug">
+      <select id="bug" class ="form-control" name="bug_name">
+        {% for item in bug %}
+          <option value="{{item.name }}">{{ item.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  <button>Add</button>
+</form>
+</div>
+ 
+{% endblock %}
+

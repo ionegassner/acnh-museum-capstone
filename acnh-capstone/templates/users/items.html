@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div>
+    <div class="col-md-7 col-lg-5">
+      <h2 class="join-message">{{ user.username }}'s items</h2>
+      {% for i in users_fish %}
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ i.img_url }}" alt="Card image cap{{ i.name }}">
+        <div class="card-body">
+          <p class="card-text">{{ i.name }}</p>
+          {% if i.catch_phrase %}
+          <p class="card-text">{{ i.catch_phrase }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+      {% for i in users_fossil %}
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ i.img_url }}" alt="Card image cap{{ i.name }}">
+        <div class="card-body">
+          <p class="card-text">{{ i.name }}</p>
+          {% if i.catch_phrase %}
+          <p class="card-text">{{ i.catch_phrase }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+      {% for i in users_seacreature %}
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ i.img_url }}" alt="Card image cap{{ i.name }}">
+        <div class="card-body">
+          <p class="card-text">{{ i.name }}</p>
+          {% if i.catch_phrase %}
+          <p class="card-text">{{ i.catch_phrase }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+      {% for i in users_bug %}
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ i.img_url }}" alt="Card image cap{{ i.name }}">
+        <div class="card-body">
+          <p class="card-text">{{ i.name }}</p>
+          {% if i.catch_phrase %}
+          <p class="card-text">{{ i.catch_phrase }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}

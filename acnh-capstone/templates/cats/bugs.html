@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+            {% for b in bugs %}
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ b.img_url }}" alt="Card image cap{{ b.name }}">
+              <div class="card-body">
+                <p class="card-text">{{ b.name }}</p>
+                <p class="card-text">{{ b.catch_phrase }}</p>
+              </div>
+            </div>
+          {% endfor %}
+    {% endblock %}
+ 
